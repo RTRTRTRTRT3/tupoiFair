@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Grid</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #f8f9fa;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 20px;
+            max-width: 1200px;
+            width: 100%;
+        }
+
+        .card {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.2s;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        .card h3 {
+            margin-bottom: 10px;
+        }
+
+        .card ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .card ul li {
+            background: #ffcc80;
+            margin: 5px 0;
+            padding: 5px;
+            border-radius: 5px;
+            display: inline-block;
+        }
+
+        .card a {
+            display: block;
+            margin-top: 10px;
+            text-decoration: none;
+            background-color: #ff5733;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        .card a:hover {
+            background-color: #d84315;
+        }
+    </style>
+</head>
+<body style="margin: 0;">
+	   <header>
+    <div class="header-top">
+        <img src="" class="logo">
+        <h5 class="main-title">Welcome to the website that will help you to cook!</h5>
+        <h5 class="sub-title">You're welcome</h5>
+    </div>
+    <nav class="nav-links">
+        <a href="index.html">Introduction</a>
+        <a href="Home page.html">Home</a>
+        <a href="about us.html">About</a>
+        <button class="cta-button"><a href="blog page.html">Blog</a></button>
+    </nav>
+<style type="text/css">
+header {
+    background: linear-gradient(to right, #ff9863, #ff6223);
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    min-height: 50px;
+    width: 100%;  /* Добавлено */
+    box-sizing: border-box; /* Учитывает padding внутри ширины */
+}
+
+
+/* Верхняя часть (лого и текст) */
+.header-top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.logo {
+    width: 150px;
+    max-width: 100%;
+}
+
+.main-title {
+    font-size: 22px;
+    font-weight: bold;
+    color: white;
+    margin: 5px 0;
+}
+
+.sub-title {
+    font-size: 18px;
+    color: #f3f3f3;
+}
+
+/* Навигация */
+.nav-links {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* Кнопка */
+.cta-button {
+    background: white;
+    color: #ff758c;
+    font-weight: bold;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.cta-button a{
+    color: #ff758c;
+}
+
+
+.cta-button:hover {
+    background: #ff4770;
+    color: white;
+}
+.moving-background {
+    width: 70%;
+    height: 100%;
+    background-image: url('https://i.pinimg.com/736x/66/69/aa/6669aa09bc7baabaf050f80c86416806.jpg');
+    background-size: cover;
+    background-position: 50% 50%;
+    animation: moveBackground 5s linear infinite alternate;
+}
+
+/* Анимация движения фона */
+@keyframes moveBackground {
+    0% {
+        background-position: 50% 50%;
+    }
+    100% {
+        background-position: 50% 70%;
+    }
+}
+
+
+</style>
+</header>
+
+
+
+<h1>Food Recipes</h1>
+<div class="grid-container" id="foodGrid"></div>
+<script>
+    async function loadFoodData() {
+        try {
+            const response = await fetch('food options.json');
+            if (!response.ok) throw new Error('Failed to load food data');
+            
+            const { food } = await response.json();
+            const gridContainer = document.getElementById("foodGrid");
+
+            food.forEach(foodItem => {
+                const card = document.createElement("div");
+                card.classList.add("card");
+
+                card.innerHTML = `
+                    <img src="${foodItem.image}" alt="${foodItem.name}" style="width:100%; border-radius: 10px;">
+                    <h3>${foodItem.name}</h3>
+                    <p>${foodItem.description}</p>
+                    <ul>${foodItem.ingredients.map(ing => `<li>${ing}</li>`).join('')}</ul>
+                    <a href="Details page.html?id=${foodItem.id}">View Recipe</a>
+
+
+                `;
+
+                gridContainer.appendChild(card);
+            });
+        } catch (error) {
+            console.error('Error loading food data:', error);
+        }
+    }
+    
+    loadFoodData();
+
+
+    document.addEventListener("DOMContentLoaded", function () {
+    fetch("data.json")
+        .then(response => response.json())
+        .then(data => {
+            const container = document.getElementById("recipeContainer");
+            data.forEach(recipe => {
+                const recipeElement = document.createElement("div");
+                recipeElement.innerHTML = `
+                    <h3>${recipe.name}</h3>
+                    <button onclick="viewRecipe(${recipe.id})">View Recipe</button>
+                `;
+                container.appendChild(recipeElement);
+            });
+        });
+});
+
+function viewRecipe(id) {
+    window.location.href = `DetailsPage.html?id=${id}`;
+}
+
+</script>
+<footer>
+    <div class="footer-content">
+        <p>&copy; 2024 AYOOOO. All rights reserved.</p>
+        <nav>
+            <a href="Home page.html">Home</a>
+            <a href="about us.html">About</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </div>
+    <style>
+        footer {
+            background-color: #404751;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            width: 100%;
+        }
+    
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    
+        footer a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+    
+        footer a:hover {
+            color: #ff9863;
+        }
+    </style>
+</footer>
+</body>
+</html>

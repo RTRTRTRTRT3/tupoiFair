@@ -1,0 +1,76 @@
+{
+  "food": [
+    {
+      "name": "Pizza",
+      "ingredients": ["dough", "sauce", "cheese", "toppings"],
+      "description": "Классическая итальянская пицца с хрустящей корочкой, сочным томатным соусом и расплавленным сыром.",
+      "receipt": "https://example.com/pizza-receipt",
+      "image": "assets/pizza image.jpg"
+    },
+    {
+      "name": "Sushi",
+      "ingredients": ["rice", "fish", "seaweed"],
+      "description": "Японские суши с нежной рыбой, мягким рисом и морскими водорослями.",
+      "receipt": "https://example.com/sushi-receipt",
+      "image": "assets/sushi image.jpg"
+    },
+    {
+      "name": "Tacos",
+      "ingredients": ["tortilla", "meat", "cheese", "vegetables"],
+      "description": "Мексиканские тако с хрустящей тортильей, пряным мясом и свежими овощами.",
+      "receipt": "https://example.com/tacos-receipt",
+      "image": "assets/taco image.jpg"
+    },
+    {
+      "name": "Salad",
+      "ingredients": ["lettuce", "vegetables", "dressing"],
+      "description": "Лёгкий и полезный салат из свежих овощей с ароматной заправкой.",
+      "receipt": "https://example.com/salad-receipt",
+      "image": "assets/salad image.jpg"
+    },
+    {
+      "name": "Burger",
+      "ingredients": ["patty", "bun", "cheese", "toppings"],
+      "description": "Сочный бургер с хрустящей булочкой, тающим сыром и свежими начинками.",
+      "receipt": "https://example.com/burger-receipt",
+      "image": "assets/burger image.jpg"
+    },
+    {
+      "name": "Ramen",
+      "ingredients": ["noodles", "broth", "vegetables", "meat"],
+      "description": "Японский рамен с ароматным бульоном, свежими овощами и нежным мясом.",
+      "receipt": "https://example.com/ramen-receipt",
+      "image": "assets/ramen image.jpg"
+    },
+    {
+      "name": "Curry",
+      "ingredients": ["rice", "curry sauce", "meat", "vegetables"],
+      "description": "Пряное карри с мягким рисом, насыщенным соусом и сочным мясом.",
+      "receipt": "https://example.com/curry-receipt",
+      "image": "assets/curry image.jpg"
+    },
+    {
+      "name": "Falafel",
+      "ingredients": ["chickpeas", "spices", "pita bread", "vegetables"],
+      "description": "Средиземноморский фалафель с хрустящей корочкой, ароматными специями и свежими овощами.",
+      "receipt": "https://example.com/falafel-receipt",
+      "image": "assets/falafel image.jpg"
+    },
+    {
+      "name": "Quesadilla",
+      "ingredients": ["tortilla", "cheese", "meat", "vegetables"],
+      "description": "Хрустящая кесадилья с растопленным сыром, сочным мясом и овощами.",
+      "receipt": "https://example.com/quesadilla-receipt",
+      "image": "assets/quesadilla image.jpg"
+    },
+    {
+      "name": "Fried Rice",
+      "ingredients": ["rice", "vegetables", "meat", "spices"],
+      "description": "Жареный рис с овощами, мясом и ароматными специями.",
+      "receipt": "https://example.com/fried-rice-receipt",
+      "image": "assets/fried rice image.jpg"
+    }
+
+  
+  ]
+}

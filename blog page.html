@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Blog</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #404751;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #ff5733;
+        }
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 20px 0;
+        }
+        .blog-card {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .blog-card img {
+            width: 100%;
+            border-radius: 8px;
+        }
+        .blog-card h3 {
+            color: #333;
+        }
+        .blog-card p {
+            color: #666;
+        }
+        .blog-card a {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 8px 12px;
+            background: #ff5733;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .blog-card a:hover {
+            background: #e04e2a;
+        }
+    </style>
+</head>
+<body>
+
+
+     <header>
+    <div class="header-top">
+        <img src="" class="logo">
+        <h5 class="main-title">Welcome to the website that will help you to cook!</h5>
+        <h5 class="sub-title">You're welcome</h5>
+    </div>
+
+    <nav class="nav-links">
+        <a href="index.html">Introduction</a>
+        <a href="Home page.html">Home</a>
+        <a href="about us.html">About</a>
+        <button class="cta-button"><a href="blog page.html">Blog</a></button>
+    </nav>
+<style type="text/css">
+header {
+    background: linear-gradient(to right, #ff9863, #ff6223);
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    min-height: 50px;
+}
+
+/* Верхняя часть (лого и текст) */
+.header-top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.logo {
+    width: 150px;
+    max-width: 100%;
+}
+
+.main-title {
+    font-size: 22px;
+    font-weight: bold;
+    color: white;
+    margin: 5px 0;
+}
+
+.sub-title {
+    font-size: 18px;
+    color: #f3f3f3;
+}
+
+/* Навигация */
+.nav-links {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* Кнопка */
+.cta-button {
+    background: white;
+    color: #ff758c;
+    font-weight: bold;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.cta-button a{
+    color: #ff758c;
+}
+
+
+.cta-button:hover {
+    background: #ff4770;
+    color: white;
+}
+.moving-background {
+    width: 70%;
+    height: 100%;
+    background-image: url('https://i.pinimg.com/736x/66/69/aa/6669aa09bc7baabaf050f80c86416806.jpg');
+    background-size: cover;
+    background-position: 50% 50%;
+    animation: moveBackground 5s linear infinite alternate;
+}
+
+/* Анимация движения фона */
+@keyframes moveBackground {
+    0% {
+        background-position: 50% 50%;
+    }
+    100% {
+        background-position: 50% 70%;
+    }
+}
+
+
+</style>
+</header>
+
+
+
+
+
+    <div class="container">
+        <h1>Food Blog</h1>
+        <div class="blog-grid">
+            <div class="blog-card">
+                <img src="assets\About us Passion.jpg" alt="Food">
+                <h3>How to Make the Perfect Pizza</h3>
+                <p>Learn the secrets to making a delicious homemade pizza with crispy crust and rich toppings.</p>
+                <a href="#">Read More</a>
+            </div>
+            <div class="blog-card">
+                <img src="assets/blog hack.jpg" alt="Cooking">
+                <h3>Top 5 Cooking Hacks You Need to Know</h3>
+                <p>Discover quick and effective cooking tips to save time and improve your skills in the kitchen.</p>
+                <a href="#">Read More</a>
+            </div>
+            <div class="blog-card">
+                <img src="assets/blog3.jpg" alt="Healthy Food">
+                <h3>Healthy Eating: Best Ingredients for a Balanced Diet</h3>
+                <p>Find out which ingredients will help you maintain a healthy lifestyle while still enjoying tasty meals.</p>
+                <a href="#">Read More</a>
+            </div>
+        </div>
+    </div>
+
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 AYOOOO. All rights reserved.</p>
+            <nav>
+                <a href="Home page.html">Home</a>
+                <a href="about us.html">About</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+        </div>
+        <style>
+            footer {
+                background-color: #404751;
+                color: white;
+                text-align: center;
+                padding: 20px 0;
+                margin-top: 20px;
+            }
+        
+            .footer-content {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+        
+            footer nav {
+                margin-top: 10px;
+            }
+        
+            footer a {
+                color: white;
+                text-decoration: none;
+                margin: 0 10px;
+                font-weight: bold;
+                transition: 0.3s;
+            }
+        
+            footer a:hover {
+                color: #ff9863;
+            }
+        </style>
+    </footer>
+</body>
+</html>
